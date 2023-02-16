@@ -1,9 +1,9 @@
 <template>
   <div>
-    <form-helper>
-      <h2 slot="title">I am the slot title</h2>
-      <p slot="text">I am the paragraph text for slot</p>
-    </form-helper>
+    <show-Blogs></show-Blogs>
+   
+
+    
   </div>
 
 
@@ -12,17 +12,20 @@
 
 
 <script>
-import formHelper from './components/formHelper.vue';
+import addBlog from './components/addBlog.vue';
+import showBlogs from './components/showBlogs.vue';
+
 
 export default {
   components:{
-    'form-helper': formHelper
-    
+    'add-Blog': addBlog,
+    'show-Blogs': showBlogs
   },
+  
 
   data () {
     return {
-      title: 'I am a dynamic slot title'
+    
         
     
     }
@@ -36,5 +39,10 @@ export default {
 </script>
 
 <style >
+
+body{
+  margin: 0;
+  font-family: 'Nunito SemiBold';
+}
 
 </style>
